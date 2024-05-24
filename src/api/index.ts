@@ -19,7 +19,7 @@ interface NewsArticle {
 }
 
 export const getNews = async (country: string): Promise<NewsResponse> => {
-  const res = await fetch(`${import.meta.env.VITE_API_URL}?country=${country}&apiKey=${import.meta.env.VITE_API_KEY}`)
+  const res = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&apiKey=a724c0ddb9284f4daac43bbffc07770d`)
 
   if (!res.ok) throw new Error('Response was not ok')
 
